@@ -1,0 +1,129 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    background-color: #66b383;
+    display: flex;
+    justify-content: center;
+}
+
+.midcontainer {
+    width: 70%;
+    height: 97%;
+    background-color: rgb(179, 178, 178);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2%;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.upperbox {
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 15%;
+    border-radius: 20px 20px 0 0;
+}
+
+.bottombox {
+    background: url(whatsappBG.png);
+    height: 74%;
+    overflow: scroll;
+}
+
+.lowwerbox input {
+    width: 86%;
+    padding-left: 20px;
+    height: 33px;
+    outline: none;
+    r: #decfcf4a;
+    border: 0.5px solid #17171736;
+    border-radius: 4px;
+}
+
+.lowwerbox button {
+    background-color: aliceblue;
+    width: 68px;
+    height: 33px;
+    border-radius: 10px;
+    outline: none;
+    /* border: 1px solid; */
+    border: 1px solid #dab7b7;
+}
+
+.lowwerbox {
+    background-color: #e4e4e4;
+    height: 11%;
+}
+
+.inputlenewaladiv {
+    padding-left: 54px;
+    margin-top: 9px;
+}
+
+.upperbox p {
+    padding: 0 0 0 81px;
+    margin: 0;
+    padding-top: 15px;
+    font-weight: bold;
+    color: #0000009e;
+    font-size: 16px;
+}
+
+.time {
+    font-size: 10px;
+}
+
+
+.msgdiv {
+    display: flex;
+    background-color: #ffffff;
+    margin: 10px 10px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px black;
+}
+
+    .msgdiv p {
+        margin: 0;
+        width: fit-content;
+    }
+
+    .msgdiv .time {
+        float: right;
+        padding-top: 10px;
+    }
+
+.msg {
+    padding: 10px 6% 0 4%;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.upperbox .time {
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.upperbox .UserName {
+    font-size: 20px;
+}
+
+.upperbox {
+    height: fit-content;
+}
+
+.Username_in_chat {
+    color: #6a6a6a;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+

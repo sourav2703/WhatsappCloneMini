@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+
+@using Asp.NetChatingWebsite.Models
+@model IEnumerable<ChatingPage>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChatingPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="~/css/chatingPage.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="midcontainer">
+
+            <div class="upperbox">
+                <p class="UserName">@ViewBag.Namee</p>
+                <p class="time">
+                    @{
+                        string ampm = null;
+                        int miniut = 0;
+                        string minu = null;
+                        if (DateTime.Now.Hour >= 12)
+                        {
+                            ampm = "PM";
+                        }
+                        else
+                        {
+                            ampm = "AM";
+                        }
+
+                        if (DateTime.Now.Minute <= 10)
+                        {
+                            miniut = @DateTime.Now.Minute;
+                            minu = miniut.ToString();
+                            minu = "0" + minu;
+
+                        }
+                        else
+                        {
+                            miniut = @DateTime.Now.Minute;
+                            minu = miniut.ToString();
+
+
+                        }
+
+
+
+                    }
+                    @DateTime.Now.Hour:@miniut:@minu | @DateTime.Now.DayOfWeek
+
+                </p>
+
+            </div>
+            <div class="bottombox">
+                @{
+                    foreach (var data in Model)
+                    {
+                        <div class="msgdiv">
+                            <div class="msg">
+                                <p class="Username_in_chat">@data.Name :</p>
+                                <p>
+                                    @data.Message
+                                </p>
+                            </div>
+                            <div class="time">
+                                <p>@DateTime.Now.Hour:@DateTime.Now.Minute</p>
+                            </div>
+
+
+                        </div>
+                    }
+                }
+              
+              
+            </div>
+
+            <div class="lowwerbox">
+                <form asp-controller="home" asp-action="SentDataIntoDb" asp-route-UserNameFromMethod="@ViewBag.Namee"  method="post">
+                    <div class="inputlenewaladiv">
+
+                        <input type="text" name="UserMessage" placeholder="Type a message">
+                        <button type="submit">Send</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

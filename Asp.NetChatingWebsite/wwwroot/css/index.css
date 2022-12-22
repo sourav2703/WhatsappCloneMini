@@ -1,0 +1,104 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+}
+
+.childcontainer {
+    width: 100%;
+    height: 200px;
+    background-color: #07c24d;
+}
+
+.loginbox {
+    height: 550px;
+    width: 90%;
+    background-color: rgba(106, 229, 229, 0);
+    position: absolute;
+    top: 7%;
+    left: 4%;
+    right: 7%;
+}
+
+.mainformstart {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    position: absolute;
+    top: 6%;
+    left: 9%;
+    padding-left: 40px;
+}
+
+.mainformstart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 2px 2px 20px rgb(77, 76, 76);
+    border: 1px solid black;
+}
+
+.btndiv button,
+input {
+    width: 100%;
+    margin: 7px 0;
+    background-color: #2af5ad;
+    height: 30px;
+    /* padding: 4px; */
+    border-radius: 10px;
+}
+
+.lbl input {
+    background-color: #b6b6b61c;
+    text-align: center;
+    height: 20px;
+    border-radius: 10px;
+    color: red;
+    border-color: #f50808e6;
+    font-size: 18px;
+    height: 26px;
+    outline: none;
+}
+
+.lbl {
+    font-size: 25px;
+    color: #478181;
+}
+
+.nameheading {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 27px;
+    color: rgb(92 111 111);
+    padding-left: 20px;
+    padding-top: 40px;
+}
+
+.whatsppnameandicon {
+    display: flex;
+}
+
+.mainformstart {
+    border-radius: 8px;
+    /* background-color: red; */
+}
+
+.whatsppnameandicon p {
+    margin: 0;
+    padding-left: 20px;
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-shadow: 1px 5px 5px black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');

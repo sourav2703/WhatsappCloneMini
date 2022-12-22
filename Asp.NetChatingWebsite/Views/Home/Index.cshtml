@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+@using Asp.NetChatingWebsite.Models
+@model ChatingPage
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="~/css/index.css" rel="stylesheet" />
+    
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+
+        </div>
+
+        <div class="loginbox">
+            <div class="whatsppnameandicon">
+
+                <span id="boot-icon" class="bi bi-whatsapp"
+                      style="font-size: 65px; color: rgb(0, 128, 55); -webkit-text-stroke-width: 3.1px;"></span>
+
+
+
+                <p>WHATSAPP</p>
+            </div>
+
+            <div class="mainformstart">
+                <div class="nameheading">
+                    <p>To Use Whatsapp Please Enter Your Unique Name</p>
+                    <hr>
+                </div>
+                <form asp-controller="home"asp-action="chatingpage" method="post">
+
+                    <div class="lbl">
+                        <label >YOUR UNIQUE NAME :-</label>
+                        <input type="text" name="UserKaNaam" placeholder="Unique Name">
+
+                    </div>
+                    <div class="btndiv">
+                        <button type="submit">Go</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
