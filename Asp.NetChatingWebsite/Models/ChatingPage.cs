@@ -7,9 +7,14 @@ namespace Asp.NetChatingWebsite.Models
 {
     public class ChatingPage
     {
+      
         public int Id { get; set; }
-        public DateTime SentOn { get; set; }
-        public string Name { get; set; }
-        public string Message { get; set; }
+     
+
+        public DateTime SentOn2 { get; set; }
+        public string Name2 { get; set; }
+        public string Message2 { get; set; }
+
+
     }
 }

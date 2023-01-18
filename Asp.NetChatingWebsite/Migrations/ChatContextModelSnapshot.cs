@@ -26,18 +26,18 @@ namespace Asp.NetChatingWebsite.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Message")
+                    b.Property<string>("Message2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Name2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("SentOn")
+                    b.Property<DateTime>("SentOn2")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Messagesss");
+                    b.ToTable("MsgTable1");
                 });
 #pragma warning restore 612, 618
         }

@@ -40,7 +40,7 @@
                     <p>To Use Whatsapp Please Enter Your Unique Name</p>
                     <hr>
                 </div>
-                <form asp-controller="home"asp-action="chatingpage" method="post">
+                <form asp-controller="home"asp-action="chatingpage" asp-fragment="@ViewBag.id" method="post">
 
                     <div class="lbl">
                         <label >YOUR UNIQUE NAME :-</label>

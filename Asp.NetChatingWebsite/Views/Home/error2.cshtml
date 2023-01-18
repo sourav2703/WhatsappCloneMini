@@ -6,7 +6,9 @@
 @using Asp.NetChatingWebsite.Models
 @model IEnumerable<ChatingPage>
 
-
+@{
+    int idd = 0;
+}
 <!DOCTYPE html>
 
 <html>
@@ -23,7 +25,12 @@
 <body>
     <div class="container">
         <div class="midcontainer">
-
+            @{
+                foreach (var a in Model)
+                {
+                    idd = a.Id;
+                }
+            }
             <div class="upperbox">
                 <p class="UserName">@ViewBag.Namee</p>
                 <p class="time">
@@ -58,7 +65,7 @@
 
 
                     }
-                    @DateTime.Now.Hour:@miniut:@minu | @DateTime.Now.DayOfWeek
+                    @DateTime.Now.Hour:@minu:@DateTime.Now.Second | @DateTime.Now.DayOfWeek
 
                 </p>
 
@@ -67,11 +74,11 @@
                 @{
                     foreach (var data in Model)
                     {
-                        <div class="msgdiv">
+                        <div class="msgdiv" id="@data.Id">
                             <div class="msg">
-                                <p class="Username_in_chat">@data.Name :</p>
+                                <p class="Username_in_chat">@data.Name2 :</p>
                                 <p>
-                                    @data.Message
+                                    @data.Message2
                                 </p>
                             </div>
                             <div class="time">
@@ -82,12 +89,12 @@
                         </div>
                     }
                 }
-              
-              
+
+
             </div>
 
             <div class="lowwerbox">
-                <form asp-controller="home" asp-action="SentDataIntoDb" asp-route-UserNameFromMethod="@ViewBag.Namee"  method="post">
+                <form asp-controller="home" asp-action="SentDataIntoDb" asp-route-UserNameFromMethod="@ViewBag.Namee" asp-fragment="@idd" method="post">
                     <div class="inputlenewaladiv">
 
                         <input type="text" name="UserMessage" placeholder="Type a message">

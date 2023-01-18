@@ -8,25 +8,25 @@ namespace Asp.NetChatingWebsite.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Messagesss",
+                name: "MsgTable1",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SentOn = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Message = table.Column<string>(nullable: true)
+                    SentOn2 = table.Column<DateTime>(nullable: false),
+                    Name2 = table.Column<string>(nullable: true),
+                    Message2 = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Messagesss", x => x.Id);
+                    table.PrimaryKey("PK_MsgTable1", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Messagesss");
+                name: "MsgTable1");
         }
     }
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Asp.NetChatingWebsite.Migrations
 {
     [DbContext(typeof(ChatContext))]
-    [Migration("20221222132532_1st")]
+    [Migration("20230118082932_1st")]
     partial class _1st
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,18 +28,18 @@ namespace Asp.NetChatingWebsite.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Message")
+                    b.Property<string>("Message2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Name2")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("SentOn")
+                    b.Property<DateTime>("SentOn2")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Messagesss");
+                    b.ToTable("MsgTable1");
                 });
 #pragma warning restore 612, 618
         }

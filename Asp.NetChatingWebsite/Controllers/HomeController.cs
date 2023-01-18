@@ -19,7 +19,8 @@ namespace Asp.NetChatingWebsite.Controllers
         }
         public IActionResult Index()
         {
-
+            var id = _chatRepository.Index_Repository();
+            ViewBag.id = id;
             return View();
         }
         [HttpPost]
@@ -37,13 +38,14 @@ namespace Asp.NetChatingWebsite.Controllers
             var Id = _chatRepository.SentDataIntoDb(UserMessage, UserNameFromMethod);
             if (Id > 0)
             {
-                return RedirectToAction(nameof(error2), new {UserKaName});
+                return RedirectToAction(nameof(error2), new {UserKaName , Id} );
             }
             return View("chatingpage");
         }
-       
-        public IActionResult error2(string UserKaName)
+        
+        public IActionResult error2(string UserKaName , int Id)
         {
+            ViewBag.id = Id;
             ViewBag.Namee = UserKaName;
             var AllMsg = _chatRepository.SentDataIntoDb();
             return View(AllMsg);

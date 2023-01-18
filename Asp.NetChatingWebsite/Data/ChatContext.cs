@@ -12,8 +12,9 @@ namespace Asp.NetChatingWebsite.Data
 
         protected  override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=sourav;Database=ChatData;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=sourav;Database=ChatTable;Integrated Security=True;");
+            base.OnConfiguring(optionsBuilder);
         }
-         public DbSet<ChatingPage> Messagesss { get; set; }
+         public DbSet<ChatingPage> MsgTable1 { get; set; }
     }
 }
